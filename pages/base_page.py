@@ -6,7 +6,7 @@ from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.support import expected_conditions as EC
 
-from settings import sets
+from ..settings import sets
 import time
 
 
@@ -27,7 +27,7 @@ class BasePage:
 
     def is_element_present(self, how, what):
         try:
-            self.browser.find_elemen(how, what)
+            self.browser.find_element(how, what)
         except NoSuchElementException:
             return False
         return True
